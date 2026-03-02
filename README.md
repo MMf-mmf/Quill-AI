@@ -40,6 +40,10 @@ Check out our [Contributing Guide](CONTRIBUTING.md) to get started!
 
 ## What It Looks Like
 
+![Quill AI Screenshot 1](Screenshot%202026-03-01%20at%208.45.55%E2%80%AFPM.png)
+
+![Quill AI Screenshot 2](Screenshot%202026-03-01%20at%208.52.39%E2%80%AFPM.png)
+
 ### Right-click menu
 ```
 ┌────────────────────────────────┐
