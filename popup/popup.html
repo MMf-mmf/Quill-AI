@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quill AI</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+
+    <!-- Header -->
+    <div class="popup-header">
+      <div class="popup-logo">
+        <span class="popup-logo-icon">✦</span>
+        <span class="popup-logo-text">Quill AI</span>
+      </div>
+    </div>
+
+    <!-- Issue Summary -->
+    <div class="popup-section" id="issue-summary">
+      <div class="popup-stats">
+        <div class="stat-pill stat-correctness" id="stat-correctness" title="Correctness">
+          <span class="stat-dot"></span>
+          <span class="stat-count">0</span>
+        </div>
+        <div class="stat-pill stat-clarity" id="stat-clarity" title="Clarity">
+          <span class="stat-dot"></span>
+          <span class="stat-count">0</span>
+        </div>
+        <div class="stat-pill stat-engagement" id="stat-engagement" title="Engagement">
+          <span class="stat-dot"></span>
+          <span class="stat-count">0</span>
+        </div>
+        <div class="stat-pill stat-delivery" id="stat-delivery" title="Delivery">
+          <span class="stat-dot"></span>
+          <span class="stat-count">0</span>
+        </div>
+      </div>
+      <div class="popup-word-count" id="word-count">No text field focused</div>
+      <div class="popup-category-filters" id="category-filters">
+        <label class="cat-filter" title="Toggle correctness issues">
+          <input type="checkbox" data-cat="correctness" checked>
+          <span class="cat-dot cat-dot-correctness"></span>
+          <span class="cat-label">Correctness</span>
+        </label>
+        <label class="cat-filter" title="Toggle clarity issues">
+          <input type="checkbox" data-cat="clarity" checked>
+          <span class="cat-dot cat-dot-clarity"></span>
+          <span class="cat-label">Clarity</span>
+        </label>
+        <label class="cat-filter" title="Toggle engagement issues">
+          <input type="checkbox" data-cat="engagement" checked>
+          <span class="cat-dot cat-dot-engagement"></span>
+          <span class="cat-label">Engagement</span>
+        </label>
+        <label class="cat-filter" title="Toggle delivery issues">
+          <input type="checkbox" data-cat="delivery" checked>
+          <span class="cat-dot cat-dot-delivery"></span>
+          <span class="cat-label">Delivery</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Check Writing Button -->
+    <button class="popup-btn popup-btn-primary" id="check-btn">
+      <span class="popup-btn-icon">✦</span>
+      Check Writing
+    </button>
+
+    <!-- Issue List -->
+    <div id="issue-list-section" class="popup-section" hidden>
+      <div class="issue-list-header">
+        <span class="issue-list-title">Suggestions</span>
+        <button class="issue-list-accept-all" id="accept-all-btn" title="Accept all suggestions">Accept All</button>
+      </div>
+      <div id="issue-list" class="issue-list"></div>
+    </div>
+
+    <!-- Controls -->
+    <div class="popup-section">
+      <!-- Site Toggle -->
+      <label class="popup-toggle">
+        <input type="checkbox" id="site-toggle" checked>
+        <span class="toggle-slider"></span>
+        <span class="toggle-text">Enable on this site</span>
+      </label>
+
+      <!-- Analysis Mode -->
+      <div class="popup-mode">
+        <span class="mode-label">Analysis mode:</span>
+        <select id="analysis-mode" class="mode-select">
+          <option value="manual">Manual</option>
+          <option value="auto">Auto</option>
+        </select>
+      </div>
+
+      <!-- Auto Delay (shown only in auto mode) -->
+      <div class="popup-delay" id="delay-section" hidden>
+        <span class="mode-label">Auto delay:</span>
+        <select id="analysis-delay" class="mode-select">
+          <option value="1000">1 second</option>
+          <option value="2000" selected>2 seconds</option>
+          <option value="3000">3 seconds</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="popup-footer">
+      <a href="#" id="settings-link" class="popup-link">Settings</a>
+      <span class="popup-version">v1.3</span>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

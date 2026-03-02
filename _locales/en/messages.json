@@ -1,0 +1,361 @@
+{
+  "extName": {
+    "message": "Quill AI",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "AI-powered text improvements on any webpage",
+    "description": "Extension description"
+  },
+  "contextMenuTitle": {
+    "message": "\u2728 Improve with AI...",
+    "description": "Context menu item title"
+  },
+  "commandDescription": {
+    "message": "Improve selected text with Quill AI",
+    "description": "Keyboard shortcut description"
+  },
+  "panelTitle": {
+    "message": "Quill AI",
+    "description": "Panel header title"
+  },
+  "closePanelLabel": {
+    "message": "Close panel",
+    "description": "Aria label for close button"
+  },
+  "generatingSuggestions": {
+    "message": "Generating suggestions\u2026",
+    "description": "Loading state text"
+  },
+  "applyBtn": {
+    "message": "Apply",
+    "description": "Apply button text"
+  },
+  "copyBtn": {
+    "message": "Copy",
+    "description": "Copy button text"
+  },
+  "copiedBtn": {
+    "message": "Copied!",
+    "description": "Copied feedback text"
+  },
+  "failedBtn": {
+    "message": "Failed",
+    "description": "Failed feedback text"
+  },
+  "copyToClipboard": {
+    "message": "Copy to clipboard",
+    "description": "Tooltip for clipboard fallback button"
+  },
+  "footerEditable": {
+    "message": "Click a suggestion to replace your selected text",
+    "description": "Footer text when text is editable"
+  },
+  "footerReadonly": {
+    "message": "Click a suggestion to copy \u2014 text is read-only on this page",
+    "description": "Footer text when text is read-only"
+  },
+  "pressEscToClose": {
+    "message": "Press Esc to close",
+    "description": "Error hint text"
+  },
+  "textReplaced": {
+    "message": "Text replaced!",
+    "description": "Success toast after replacement"
+  },
+  "copiedPasteCtrlV": {
+    "message": "Copied \u2014 paste with Ctrl+V",
+    "description": "Clipboard fallback toast"
+  },
+  "applyFailedManual": {
+    "message": "Apply failed \u2014 copy the text manually",
+    "description": "Apply failure toast"
+  },
+  "somethingWentWrong": {
+    "message": "Something went wrong.",
+    "description": "Generic error message"
+  },
+  "errorNoApiKey": {
+    "message": "No API key set \u2014 open Quill AI Settings to add one.",
+    "description": "No API key error"
+  },
+  "errorInputTooLong": {
+    "message": "Selection too long ($COUNT$ chars). Please select fewer than $MAX$ characters.",
+    "description": "Input too long error",
+    "placeholders": {
+      "count": { "content": "$1", "example": "9500" },
+      "max": { "content": "$2", "example": "8000" }
+    }
+  },
+  "errorNetwork": {
+    "message": "Network error \u2014 check your connection.",
+    "description": "Network error"
+  },
+  "errorEmptyResponse": {
+    "message": "Gemini returned an empty response.",
+    "description": "Empty response error"
+  },
+  "errorParse": {
+    "message": "Could not parse AI response.",
+    "description": "Parse error"
+  },
+  "errorReadResponse": {
+    "message": "Could not read API response.",
+    "description": "Response read error"
+  },
+  "errorUnknown": {
+    "message": "An unexpected error occurred.",
+    "description": "Unknown error"
+  },
+  "error400": {
+    "message": "Request error \u2014 please try again.",
+    "description": "HTTP 400 error"
+  },
+  "error401": {
+    "message": "Invalid API key \u2014 check Settings.",
+    "description": "HTTP 401 error"
+  },
+  "error403": {
+    "message": "API key not authorized \u2014 check AI Studio.",
+    "description": "HTTP 403 error"
+  },
+  "error429": {
+    "message": "Too many requests \u2014 try again in a moment.",
+    "description": "HTTP 429 error"
+  },
+  "error500": {
+    "message": "Gemini is unavailable \u2014 try again shortly.",
+    "description": "HTTP 500 error"
+  },
+  "errorUnexpectedStatus": {
+    "message": "Unexpected error ($STATUS$).",
+    "description": "Unexpected HTTP error",
+    "placeholders": {
+      "status": { "content": "$1", "example": "502" }
+    }
+  },
+  "optionsTitle": {
+    "message": "Quill AI Settings",
+    "description": "Options page title"
+  },
+  "headerSubtitle": {
+    "message": "AI-powered text improvements on any webpage",
+    "description": "Header subtitle"
+  },
+  "apiConfigHeading": {
+    "message": "API Configuration",
+    "description": "API section heading"
+  },
+  "apiConfigDesc": {
+    "message": "Get your free API key from Google AI Studio.",
+    "description": "API section description"
+  },
+  "apiKeyLabel": {
+    "message": "Gemini API Key",
+    "description": "API key input label"
+  },
+  "showBtn": {
+    "message": "Show",
+    "description": "Show API key button"
+  },
+  "hideBtn": {
+    "message": "Hide",
+    "description": "Hide API key button"
+  },
+  "testConnectionBtn": {
+    "message": "Test Connection",
+    "description": "Test connection button"
+  },
+  "testingBtn": {
+    "message": "Testing\u2026",
+    "description": "Testing in progress"
+  },
+  "connectionSuccess": {
+    "message": "\u2713 Connected",
+    "description": "Connection success badge"
+  },
+  "connectionNoKey": {
+    "message": "\u2717 No API key entered",
+    "description": "No API key badge"
+  },
+  "connectionNetworkError": {
+    "message": "\u2717 Network error",
+    "description": "Network error badge"
+  },
+  "connectionFailed": {
+    "message": "\u2717 $MSG$",
+    "description": "Connection test failure",
+    "placeholders": {
+      "msg": { "content": "$1", "example": "Invalid API key" }
+    }
+  },
+  "modelHeading": {
+    "message": "AI Model",
+    "description": "Model section heading"
+  },
+  "modelDesc": {
+    "message": "Choose the Gemini model to use for suggestions.",
+    "description": "Model section description"
+  },
+  "stylesHeading": {
+    "message": "Suggestion Styles",
+    "description": "Styles section heading"
+  },
+  "stylesDesc": {
+    "message": "Choose exactly 3 styles to use when improving text.",
+    "description": "Styles section description"
+  },
+  "stylesError": {
+    "message": "Please select exactly 3 styles ($COUNT$ selected).",
+    "description": "Styles validation error",
+    "placeholders": {
+      "count": { "content": "$1", "example": "2" }
+    }
+  },
+  "customPromptHeading": {
+    "message": "Custom Instructions",
+    "description": "Custom prompt section heading"
+  },
+  "customPromptDesc": {
+    "message": "Override the default system prompt sent to Gemini. Leave empty to use the built-in prompt.",
+    "description": "Custom prompt section description"
+  },
+  "systemInstructionLabel": {
+    "message": "System Instruction",
+    "description": "System instruction textarea label"
+  },
+  "styleDescLabel": {
+    "message": "Style Descriptions (optional)",
+    "description": "Style descriptions heading"
+  },
+  "styleDescHint": {
+    "message": "Add a brief description for each selected style to guide the AI.",
+    "description": "Style descriptions hint"
+  },
+  "themeHeading": {
+    "message": "Appearance",
+    "description": "Theme section heading"
+  },
+  "themeDesc": {
+    "message": "Choose the theme for Quill AI interfaces.",
+    "description": "Theme section description"
+  },
+  "themeSystem": {
+    "message": "System",
+    "description": "System theme option"
+  },
+  "themeSystemDesc": {
+    "message": "Follow your OS light/dark preference",
+    "description": "System theme description"
+  },
+  "themeLight": {
+    "message": "Light",
+    "description": "Light theme option"
+  },
+  "themeLightDesc": {
+    "message": "Always use light theme",
+    "description": "Light theme description"
+  },
+  "themeDark": {
+    "message": "Dark",
+    "description": "Dark theme option"
+  },
+  "themeDarkDesc": {
+    "message": "Always use dark theme",
+    "description": "Dark theme description"
+  },
+  "saveBtn": {
+    "message": "Save Settings",
+    "description": "Save button text"
+  },
+  "savedFeedback": {
+    "message": "\u2713 Saved",
+    "description": "Save success feedback"
+  },
+  "statsHeading": {
+    "message": "Usage Statistics",
+    "description": "Stats section heading"
+  },
+  "statsDesc": {
+    "message": "Local-only stats \u2014 never sent anywhere.",
+    "description": "Stats section description"
+  },
+  "totalImprovements": {
+    "message": "Total Improvements",
+    "description": "Total improvements stat label"
+  },
+  "charsImproved": {
+    "message": "Characters Improved",
+    "description": "Characters improved stat label"
+  },
+  "styleUsage": {
+    "message": "Style Usage",
+    "description": "Style usage breakdown title"
+  },
+  "modelUsage": {
+    "message": "Model Usage",
+    "description": "Model usage breakdown title"
+  },
+  "resetStats": {
+    "message": "Reset Stats",
+    "description": "Reset stats button"
+  },
+  "footerVersion": {
+    "message": "Quill AI v$VERSION$ \u00b7 Personal use only",
+    "description": "Footer text",
+    "placeholders": {
+      "version": { "content": "$1", "example": "1.2" }
+    }
+  },
+  "autocompleteHeading": {
+    "message": "Inline Autocomplete",
+    "description": "Autocomplete section heading"
+  },
+  "autocompleteDesc": {
+    "message": "Show AI-powered text completions as you type. Press Tab to accept, Ctrl+Right for word-by-word, Esc to dismiss.",
+    "description": "Autocomplete section description"
+  },
+  "autocompleteToggle": {
+    "message": "Enable inline autocomplete",
+    "description": "Autocomplete toggle label"
+  },
+  "acDelayHeading": {
+    "message": "Trigger Delay",
+    "description": "Autocomplete delay setting heading"
+  },
+  "acDelayDesc": {
+    "message": "How long to wait after you stop typing before suggesting completions.",
+    "description": "Autocomplete delay setting description"
+  },
+  "acDelayFast": {
+    "message": "Fast",
+    "description": "Fast delay option (300ms)"
+  },
+  "acDelayNormal": {
+    "message": "Normal",
+    "description": "Normal delay option (600ms)"
+  },
+  "acDelayRelaxed": {
+    "message": "Relaxed",
+    "description": "Relaxed delay option (1s)"
+  },
+  "acMinCharsLabel": {
+    "message": "Minimum characters before suggesting",
+    "description": "Minimum characters input label"
+  },
+  "acHintsToggle": {
+    "message": "Show keyboard hints",
+    "description": "Keyboard hints toggle label"
+  },
+  "acHintTab": {
+    "message": "Tab",
+    "description": "Tab key hint text shown in ghost text"
+  },
+  "acScreenReaderSuggestion": {
+    "message": "Suggestion: $TEXT$. Press Tab to accept.",
+    "description": "Screen reader announcement for autocomplete suggestion",
+    "placeholders": {
+      "text": { "content": "$1", "example": "the quick brown fox" }
+    }
+  }
+}

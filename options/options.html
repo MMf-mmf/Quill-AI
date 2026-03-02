@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quill AI Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✦</span>
+          <span class="logo-text">Quill AI</span>
+        </div>
+        <p class="header-subtitle" data-i18n="headerSubtitle">AI-powered text improvements on any webpage</p>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- Section 1: API Configuration -->
+      <section class="card" aria-labelledby="api-heading">
+        <h2 class="card-title" id="api-heading" data-i18n="apiConfigHeading">API Configuration</h2>
+        <p class="card-desc">
+          Get your free API key from
+          <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">
+            Google AI Studio
+          </a>.
+        </p>
+
+        <div class="field">
+          <label class="label" for="api-key-input">Gemini API Key</label>
+          <div class="input-row">
+            <input
+              type="password"
+              id="api-key-input"
+              class="input"
+              placeholder="AIza..."
+              autocomplete="off"
+              spellcheck="false"
+            >
+            <button type="button" id="toggle-key-btn" class="btn-ghost" aria-label="Show/hide API key">
+              Show
+            </button>
+          </div>
+        </div>
+
+        <div class="action-row">
+          <button type="button" id="test-connection-btn" class="btn-secondary">
+            Test Connection
+          </button>
+          <span id="connection-status" class="status-badge" role="status" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <!-- Section 2: AI Model -->
+      <section class="card" aria-labelledby="model-heading">
+        <h2 class="card-title" id="model-heading" data-i18n="modelHeading">AI Model</h2>
+        <p class="card-desc" data-i18n="modelDesc">Choose the Gemini model to use for suggestions.</p>
+
+        <div class="radio-group" role="radiogroup" aria-labelledby="model-heading">
+          <label class="radio-label">
+            <input type="radio" name="model" value="gemini-2.5-flash-lite" checked>
+            <span class="radio-info">
+              <strong>Gemini 2.5 Flash Lite</strong>
+              <span class="radio-desc">Fastest · Recommended</span>
+            </span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="model" value="gemini-2.5-flash">
+            <span class="radio-info">
+              <strong>Gemini 2.5 Flash</strong>
+              <span class="radio-desc">Fast and capable</span>
+            </span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="model" value="gemini-3-flash-preview">
+            <span class="radio-info">
+              <strong>Gemini 3 Flash Preview</strong>
+              <span class="radio-desc">Latest preview</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Section 3: Suggestion Styles -->
+      <section class="card" aria-labelledby="styles-heading">
+        <h2 class="card-title" id="styles-heading" data-i18n="stylesHeading">Suggestion Styles</h2>
+        <p class="card-desc" data-i18n="stylesDesc">Choose exactly 3 styles to use when improving text.</p>
+
+        <div class="checkbox-grid" role="group" aria-labelledby="styles-heading">
+          <label class="checkbox-label">
+            <input type="checkbox" name="style" value="Professional" checked>
+            <span class="checkbox-info">
+              <strong>Professional</strong>
+              <span class="checkbox-desc">Formal and business-appropriate</span>
+            </span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="style" value="Concise" checked>
+            <span class="checkbox-info">
+              <strong>Concise</strong>
+              <span class="checkbox-desc">Clear and to the point</span>
+            </span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="style" value="Enhanced" checked>
+            <span class="checkbox-info">
+              <strong>Enhanced</strong>
+              <span class="checkbox-desc">Polished with improved flow</span>
+            </span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="style" value="Creative">
+            <span class="checkbox-info">
+              <strong>Creative</strong>
+              <span class="checkbox-desc">Vivid and expressive</span>
+            </span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="style" value="Formal">
+            <span class="checkbox-info">
+              <strong>Formal</strong>
+              <span class="checkbox-desc">Academic or official tone</span>
+            </span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="style" value="Casual">
+            <span class="checkbox-info">
+              <strong>Casual</strong>
+              <span class="checkbox-desc">Friendly and conversational</span>
+            </span>
+          </label>
+        </div>
+
+        <p id="styles-error" class="field-error" role="alert" hidden>
+          Please select exactly 3 styles.
+        </p>
+      </section>
+
+      <!-- Section 4: Custom Instructions -->
+      <section class="card" aria-labelledby="prompt-heading">
+        <h2 class="card-title" id="prompt-heading" data-i18n="customPromptHeading">Custom Instructions</h2>
+        <p class="card-desc">
+          Override the default system prompt sent to Gemini. Leave empty to use the built-in prompt.
+        </p>
+
+        <div class="field">
+          <label class="label" for="custom-prompt">System Instruction</label>
+          <textarea
+            id="custom-prompt"
+            class="textarea"
+            rows="4"
+            placeholder="e.g., You are a technical writer. Always use active voice and avoid jargon..."
+            spellcheck="false"
+          ></textarea>
+        </div>
+
+        <div class="field">
+          <label class="label">Style Descriptions (optional)</label>
+          <p class="card-desc" style="margin-bottom: 10px;">
+            Add a brief description for each selected style to guide the AI.
+          </p>
+          <div id="style-descriptions"></div>
+        </div>
+      </section>
+
+      <!-- Section 5: Appearance -->
+      <section class="card" aria-labelledby="theme-heading">
+        <h2 class="card-title" id="theme-heading" data-i18n="themeHeading">Appearance</h2>
+        <p class="card-desc" data-i18n="themeDesc">Choose the theme for Quill AI interfaces.</p>
+
+        <div class="radio-group" role="radiogroup" aria-labelledby="theme-heading">
+          <label class="radio-label">
+            <input type="radio" name="theme" value="auto" checked>
+            <span class="radio-info">
+              <strong>System</strong>
+              <span class="radio-desc">Follow your OS light/dark preference</span>
+            </span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="theme" value="light">
+            <span class="radio-info">
+              <strong>Light</strong>
+              <span class="radio-desc">Always use light theme</span>
+            </span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="theme" value="dark">
+            <span class="radio-info">
+              <strong>Dark</strong>
+              <span class="radio-desc">Always use dark theme</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Section 6: Inline Autocomplete -->
+      <section class="card" aria-labelledby="autocomplete-heading">
+        <h2 class="card-title" id="autocomplete-heading" data-i18n="autocompleteHeading">Inline Autocomplete</h2>
+        <p class="card-desc" data-i18n="autocompleteDesc">
+          Show AI-powered text completions as you type. Press Tab to accept, Ctrl+Right for word-by-word, Esc to dismiss.
+        </p>
+        <label class="toggle-label">
+          <input type="checkbox" id="autocomplete-toggle" name="autocomplete">
+          <span class="toggle-slider"></span>
+          <span class="toggle-text" data-i18n="autocompleteToggle">Enable inline autocomplete</span>
+        </label>
+
+        <!-- Sub-settings (shown when autocomplete is enabled) -->
+        <div id="ac-settings" class="ac-sub-settings" hidden>
+          <div class="field" style="margin-top: 16px;">
+            <label class="label" data-i18n="acDelayHeading">Trigger Delay</label>
+            <p class="card-desc" style="margin-bottom: 8px;" data-i18n="acDelayDesc">
+              How long to wait after you stop typing before suggesting completions.
+            </p>
+            <div class="radio-group" role="radiogroup" aria-labelledby="autocomplete-heading">
+              <label class="radio-label">
+                <input type="radio" name="ac-delay" value="300" checked>
+                <span class="radio-info">
+                  <strong data-i18n="acDelayFast">Fast</strong>
+                  <span class="radio-desc">300ms</span>
+                </span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="ac-delay" value="600">
+                <span class="radio-info">
+                  <strong data-i18n="acDelayNormal">Normal</strong>
+                  <span class="radio-desc">600ms</span>
+                </span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="ac-delay" value="1000">
+                <span class="radio-info">
+                  <strong data-i18n="acDelayRelaxed">Relaxed</strong>
+                  <span class="radio-desc">1 second</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field" style="margin-top: 12px;">
+            <label class="label" for="ac-min-chars" data-i18n="acMinCharsLabel">Minimum characters before suggesting</label>
+            <input type="number" id="ac-min-chars" class="input" style="width: 80px;"
+                   min="5" max="50" value="10">
+          </div>
+
+          <label class="toggle-label" style="margin-top: 12px;">
+            <input type="checkbox" id="ac-hints-toggle" name="ac-hints" checked>
+            <span class="toggle-slider"></span>
+            <span class="toggle-text" data-i18n="acHintsToggle">Show keyboard hints</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Save Button -->
+      <div class="save-row">
+        <button type="button" id="save-btn" class="btn-primary">
+          Save Settings
+        </button>
+        <span id="save-status" class="save-feedback" role="status" aria-live="polite"></span>
+      </div>
+
+      <!-- Section: Usage Statistics -->
+      <section class="card" aria-labelledby="stats-heading">
+        <h2 class="card-title" id="stats-heading" data-i18n="statsHeading">Usage Statistics</h2>
+        <p class="card-desc" data-i18n="statsDesc">Local-only stats — never sent anywhere.</p>
+        <div class="stats-grid" id="stats-grid">
+          <!-- Populated by JS -->
+        </div>
+        <div class="action-row" style="margin-top: 14px;">
+          <button type="button" id="reset-stats-btn" class="btn-secondary">Reset Stats</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      Quill AI v1.3 &nbsp;·&nbsp; Personal use only
+    </footer>
+
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
