@@ -8,6 +8,18 @@ Quill AI is a personal Microsoft Edge browser extension that sends any selected 
 
 ---
 
+## 🚧 Work in Progress — Core Contributors Wanted!
+
+Quill AI is currently an open-source **Work in Progress (WIP)**. We are actively looking for **core contributors / co-contributors** to help us level up the project! If you're passionate about building great browser extensions, we need your help to:
+
+- **Squash Bugs**: Help us handle edge cases in editable contexts, SPAs, and Shadow DOM conflicts across the web.
+- **Clean the Code**: Refactor the codebase to make it cleaner, more modular, and easier to maintain—while keeping our zero-build-step philosophy.
+- **Improve UI/UX**: Elevate the design and user experience of the suggestion panel, autocomplete, and settings page.
+
+Check out our [Contributing Guide](CONTRIBUTING.md) to get started!
+
+---
+
 ## Features
 
 - **Works everywhere** — email, forms, Google Docs, LinkedIn, Teams, social media, articles
